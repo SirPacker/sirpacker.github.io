@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 html {
   height: 100%;
-  min-width: 25vw;
+  width: 100%;
 }
 
 body {
@@ -51,6 +51,60 @@ body {
   height: 56vh;
   width: 38vw;
   padding: 2em;
+}
+
+@media screen and (max-width: 892px) {
+  .base {
+    line-height: 23px;
+  }
+  .base img {
+    max-width: 100px;
+  }
+  .base i {
+    width: 30%;
+    height: auto;
+  }
+
+  .main {
+    height: 95%;
+    width: 85%;
+  }
+
+  .border {
+    height: 97%;
+    width: 95%;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 847px) {
+  .base img {
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 560px) {
+  body {
+    font-size: 15px;
+  }
+
+  .base {
+    line-height: 15px;
+  }
+  .base img {
+    display: none;
+  }
+  .base i {
+    width: 20%;
+    height: auto;
+  }
+
+  .main {
+    height: 100%;
+    width: 100%;
+  }
+
+  .border {
+    height: 97%;
+    width: 97%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
