@@ -55,15 +55,20 @@ body
   width: ($baseVW - 2vw)
   padding: 2em
 
+.icons
+  display: flex
+
+  a
+    flex-shrink: 0
+  > * + *
+    margin-left: 10px
+
 @media screen and ( max-width: 892px )
   .base
     line-height: 23px
 
     img
       max-width: 100px
-    i
-      width: 30%
-      height: auto
 
   .main
     height: 95%
@@ -73,17 +78,7 @@ body
     height: 97%
     width: 95%
 
-@media screen and (orientation: landscape) and (max-height: 847px)
-  .base
-    img
-      display: none
-
-@media screen and (orientation: landscape) and ( max-width: 1521px) and ( max-height: 900px)
-  .base
-    img
-      display: none
-
-@media screen and (orientation: landscape) and ( max-width: 1205px) and ( max-height: 950px)
+@media screen and (orientation: landscape) and (max-height: 847px), (orientation: landscape) and ( max-width: 1521px) and ( max-height: 900px), (orientation: landscape) and ( max-width: 1205px) and ( max-height: 950px)
   .base
     img
       display: none
@@ -97,10 +92,6 @@ body
 
     img
       display: none
-
-    i
-      width: 20%
-      height: auto
 
   .main
     height: 100%
