@@ -19,12 +19,13 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  position: absolute;
+  position: relative;
   justify-content: center;
   align-items: center;
   text-align: center;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .base h1 {
   font-weight: bold;
@@ -40,12 +41,14 @@ body {
 }
 
 .main {
+  position: absolute;
   background-color: rgba(35, 39, 42, 0.45);
   height: 60vh;
   width: 40vw;
 }
 
 .border {
+  position: absolute;
   border: solid #fff 3px;
   box-sizing: border-box;
   height: 56vh;
@@ -80,7 +83,17 @@ body {
     display: none;
   }
 }
-@media screen and (orientation: landscape) and (max-height: 560px) {
+@media screen and (orientation: landscape) and (max-width: 1521px) and (max-height: 900px) {
+  .base img {
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 1205px) and (max-height: 950px) {
+  .base img {
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 560px), (orientation: landscape) and (max-width: 1521px) and (max-height: 645px) {
   body {
     font-size: 15px;
   }

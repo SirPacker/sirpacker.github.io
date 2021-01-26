@@ -23,12 +23,13 @@ body
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  position: absolute
+  position: relative
   justify-content: center
   align-items: center
   text-align: center
   display: flex
   flex-direction: column
+  overflow: hidden
 
   h1
     font-weight: bold
@@ -41,11 +42,13 @@ body
     max-width: 150px
 
 .main
+  position: absolute
   background-color: rgba(#23272A, 0.45)
   height: $baseVH
   width: $baseVW
 
 .border
+  position: absolute
   border: solid #fff $borderSize
   box-sizing: border-box
   height: ($baseVH - 4vh)
@@ -75,7 +78,17 @@ body
     img
       display: none
 
-@media screen and (orientation: landscape) and (max-height: 560px)
+@media screen and (orientation: landscape) and ( max-width: 1521px) and ( max-height: 900px)
+  .base
+    img
+      display: none
+
+@media screen and (orientation: landscape) and ( max-width: 1205px) and ( max-height: 950px)
+  .base
+    img
+      display: none
+
+@media screen and (orientation: landscape) and (max-height: 560px), (orientation: landscape) and ( max-width: 1521px) and ( max-height: 645px)
   body
     font-size: 15px
 
