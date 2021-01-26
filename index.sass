@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap')
+
+$baseVH: 60vh
+$baseVW: 40vw
+$borderSize: 3px
+
+html
+  height: 100%
+  min-width: 25vw
+
+body
+  background: linear-gradient(30deg, #00a8d7, #0BE39B)
+  background-repeat: no-repeat
+  background-size: cover
+  overflow: hidden
+  font-family: Fira Code
+  font-size: 20px
+  color: #fff
+
+.base
+  border-radius: 15px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  position: absolute
+  justify-content: center
+  align-items: center
+  text-align: center
+  display: flex
+  flex-direction: column
+
+  h1
+    font-weight: bold
+  a
+    color: #fff
+  img
+    border: solid #fff $borderSize
+    border-radius: 100%
+    max-height: 150px
+    max-width: 150px
+
+.main
+  background-color: rgba(#23272A, 0.45)
+  height: $baseVH
+  width: $baseVW
+
+.border
+  border: solid #fff $borderSize
+  box-sizing: border-box
+  height: ($baseVH - 4vh)
+  width: ($baseVW - 2vw)
+  padding: 2em
